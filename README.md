@@ -1,3 +1,3 @@
 # AmirDhe.github.io
 
-[Live demo](https://amirdhe.github.io/index.html)
+[Live Demo](https://amirdhe.github.io/index.html)
