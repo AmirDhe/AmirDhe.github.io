@@ -1,195 +1,305 @@
-/* Q#: All the elements have margin of 0 from the top, bottom, left, and right */
-*{
-    margin: 0;
+header .navbar {
+    padding: 2px;
+    background-color: #2c2c2c !important; /* Noir léger */
+}
+
+header .navbar-brand, header .navbar .nav-item a {
+    color: white !important; /* Texte blanc pour contraster avec le fond noir */
+    font-size: 10px;
+}
+
+header .navbar .nav-item a:hover {
+    text-decoration: underline;
+}
+
+.navbar-toggler {
+    display: none; /* Par défaut, le bouton est caché */
+    border: none;
+    background: none;
+    color: white; /* Coloration de l'icône en blanc pour contraster avec le fond noir */
+    padding: 12px;
+    font-size: 24px; /* Ajustez la taille de l'icône selon vos besoins */
+}
+
+/* Affichage du bouton sur les petits écrans */
+@media (max-width: 992px) {
+    .navbar-toggler {
+        display: block;
+    }
+    header .navbar-collapse {
+        position: static; /* On utilise "static" pour faire descendre le contenu naturellement */
+        width: 100%; /* On s'assure que le menu déroulant prend toute la largeur */
+        background-color: #2c2c2c !important; /* Noir léger uniforme */
     }
 
-
-/* Q1: HTML5 Semantic Elements as Block Level */
-/* Ensure all HTML5 semantic elements are displayed as block-level elements */
-article, aside, details, figcaption, figure, footer, header, main, nav, section, summary {
-    display: block;
+    header .navbar .nav-item {
+        text-align: left; /* Aligner le texte à gauche */
+        padding: 10px 0; /* Espacement autour des éléments de navigation pour un meilleur rendu */
+    }
 }
 
-/* Q2 2. The <body> element has to be styled with: */
+img {
+    width: auto; /* La largeur s'ajuste automatiquement pour conserver le rapport hauteur/largeur */
+    height: 200px; /* Hauteur souhaitée */
+}
+
+.feature-icon {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 20px;
+}
+
+.feature h3 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.feature p {
+    margin-bottom: 20px;
+}
+
+#icon2 {
+    width: 100px; /* ou la taille que vous préférez */
+    height: auto; /* pour maintenir le ratio d'aspect */
+}
+
+.optic-image {
+    max-width: auto;
+    height: 500px;
+}
+
+.feature-icon {
+    width: 70px;
+    height: auto;
+}
+
+.apple-btn {
+    background-color: #000; 
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px; 
+    transition: background-color 0.3s;
+}
+
+.apple-btn:hover {
+    background-color: #444;
+}
+
+.feature-header {
+    height: 80px; /* Hauteur réduite pour les en-têtes */
+    width: 100%; /* Largeur pleine pour les en-têtes */
+}
+
+.feature-icon {
+    width: 50px;  /* Largeur réduite pour les logos */
+    height: 50px; /* Hauteur réduite pour les logos */
+}
+
+.bg-kaki {
+    background-color: #708238;
+}
+
+.responsive-image {
+    max-width: 100%; /* L'image ne dépassera pas la largeur de son conteneur */
+    height: auto;    /* La hauteur s'ajuste automatiquement pour conserver le rapport hauteur/largeur */
+}
+
+section {
+    margin-top: 30px;
+    margin-bottom: 30px;;
+}
+
+.mon-arrondi {
+    border-radius: 15px; /* À ajuster selon vos préférences */
+}
+
+.btn-kaki {
+    background-color: #549cc8; /* Couleur de fond pour le vert kaki */
+    border-color: #808000; /* Couleur de la bordure */
+}
+
+.btn-kaki:hover, .btn-kaki:focus, .btn-kaki:active {
+    background-color: #72721a; /* Une teinte légèrement plus sombre pour l'état survolé ou actif */
+    border-color: #6B6B00;
+}
+
 body {
-    color: #705858; /*2)a) Any colour you prefer for the text */
-    background-image: url('../assets/images/dark-woods/dark-wood5.jpg'); /*A background image*/
-    font-family: Arial, Helvetica, sans-serif; /* c) 3 front family options d) Margin 0 at the first rule*/
+    zoom: 1.2; /* Ceci augmentera la taille de tous les éléments à 110% de leur taille originale */
 }
 
-/*3) Style the <div> element with class “container”*/
-.container {
-    width: 950px;/* 3)a) The width value can be 950px */
-    max-width: 1300px;
-    margin: 5px auto; /* 3)b) 5px margin from top and bottom *c) The div has to be aligned centered */
-    background-color: #ece6d0; /* 3)d) Apply any background colour that you prefer */
+#carouselFeatures .carousel-item {
+    height: 600px;  /* Vous pouvez ajuster cela selon vos besoins */
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
 }
 
-/* 4. Style any element with class value of “content”, in other word target the class named “content”: */
-.content {
-    line-height: 1.4em; /* a. The line height (of the text) should be 1.4em */
-    padding: 10px; /* b. 10px padding to all the sides */
+/* Accordion Styles */
+
+#faq h2 {
+    margin-bottom: none;
+    color: #555;
 }
 
-/* 5. Style the “header, nav, and footer” elements to share the following: */
-header, nav, footer {
-    background-color: #2c3e50; /* a. Any Dark/Light background colour */
-    color: #ecf0f1; /* b. Any Dark/Light foreground colour (normal font colour) */
-
+.accordion-button {
+    width: 100%;
+    text-align: left;
+    background-color: #f4f4f4;
+    color: #333;
+    border: none;
+    outline: none;
+    transition: all 0.3s;
+    border-radius: 5px;
+    font-size: 18px;
+    padding: 15px 25px;
 }
 
-/* 6) Style the unordered list element <ul> which is inside <nav> element */
-nav > ul {
-    margin: 0; /* 6a) 0 margin from all the sides */
-    padding: 5px; /* 6b) 5px padding from all the sides */
+.accordion-button:hover {
+    background-color: #e4e4e4;
 }
 
-
-/* 7) Style the list items <li> of the main navigation (nav) */
-nav li {
-    display: inline-block; /* 7a) To be displayed horizontally */
-    margin-right: 40px; /* 7b) Adding margin of 40px to the right of each list item */
-    text-transform: uppercase; /* 7c) All the navigation items should be displayed as Uppercase */
+.accordion-button:not(.collapsed) {
+    color: #fff;
+    background-color: #8a8a5c;
 }
 
-/*8) Add the 4 pseudo classes effect to the anchor tags/elements of the main navigation list items */
-nav a:link {
-    color: #ffffff; /* The normal link */
+.accordion-collapse {
+    border-top: 1px solid #ddd;
 }
 
-nav a:visited {
-    color: #ffffff; /* The visited link */
+.accordion-body {
+    padding: 15px 25px;
+    background-color: #f9f9f9;
+    font-size: 16px;
+    border-radius: 0 0 5px 5px;
 }
 
-nav a:hover {
-    color: #e74c3c; /* The hover link */
+#contact {
+    background-color: #f8f9fa; /* Couleur de fond */
+    padding: 40px; /* Espace intérieur */
 }
 
-nav a:active {
-    color: #c0392b; /* The active link */
+/* Style pour Div 1 (Formulaire de contact) */
+.contact-form {
+    background-color: #ffffff; /* Couleur de fond */
+    padding: 20px; /* Espace intérieur */
+    border-radius: 10px; /* Coins arrondis */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Ombre légère */
 }
 
-/* 9. Style any anchor <a> element: */
-a {
-    color: #3498db; /* a. Any colour you like */
-    text-decoration: none; /* b. No underline */
+/* Style pour Div 2 (Coordonnées) */
+.contact-info {
+    background-color: #ffffff; /* Couleur de fond */
+    padding: 20px; /* Espace intérieur */
+    border-radius: 10px; /* Coins arrondis */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Ombre légère */
 }
 
-/* Q10: Style the three headings: h1, h2, and h3: */
-h1, h2, h3 {
-    margin: 10px; /* a. To have margin of 10px for all the sides */
-    text-transform: uppercase; /* b. With Uppercase letters */
-    color: #3a3763; /* c. Different dark/light colour. (Change this value as per your design preference) */
-}
+button {
+    font-family: inherit;
+    font-size: 18px;
+    background: linear-gradient(to bottom, #4dc7d9 0%,#66a6ff 100%);
+    color: white;
+    padding: 0.8em 1.2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 25px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s;
+  }
+  
+  button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
+  }
+  
+  button:active {
+    transform: scale(0.95);
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  button span {
+    display: block;
+    margin-left: 0.4em;
+    transition: all 0.3s;
+  }
+  
+  button svg {
+    width: 18px;
+    height: 18px;
+    fill: white;
+    transition: all 0.3s;
+  }
+  
+  button .svg-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.2);
+    margin-right: 0.5em;
+    transition: all 0.3s;
+  }
+  
+  button:hover .svg-wrapper {
+    background-color: rgba(255, 255, 255, 0.5);
+  }
+  
+  button:hover svg {
+    transform: rotate(45deg);
+  }
+  
+  .button {
+    background-color: #ffffff00;
+    color: #fff;
+    width: 8.5em;
+    height: 2.9em;
+    border: #ffffff 0.2em solid;
+    border-radius: 11px;
+    text-align: right;
+    transition: all 0.6s ease;
+  }
+  
+  .button:hover {
+    background-color: #ffffff;
+    color: #000
+  }
+  
+  .button svg {
+    width: 1.6em;
+    margin: -0.2em 0.8em 1em;
+    position: absolute;
+    display: flex;
+    transition: all 0.6s ease;
+  }
+  
+  .button:hover svg {
+    transform: translateX(5px);
+  }
+  
+  .text {
+    margin: 0 1.5em
+  }
 
-/* Q11: Style the custom class named “img-centre”: */
-.img-centre {
-    display: block; /* To make <img> a block level element */
-    margin: 5px auto; /* a and b. Centre the image horizontally and having margin of 5px from the top and bottom */
-    padding: 2px; /* c. Having padding of 2px to all the sides */
-}
-
-
-/* Q12: Style the <audio> and <video> elements: */
-audio, video {
-    display: block; /* To make audio and video block level elements */
-    margin: 10px auto; /* a and b. Centre any audio or video element (horizontally) with margin of 10px from the top and bottom */
-}
-
-
-/* Q13: Style any <table> element: */
-table {
-    width: 800px; /* a. The width is 800px */
-    margin: 10px auto; /* b. Centre the table horizontally with 10px of margining from the top and bottom sides */
-    border-collapse: collapse; /* c. The table border has to be collapsed */
-}
-
-
-/* Q14: Style both the <td> and <th> element of any table: */
-td, th {
-    border: 1px solid #000; /* a. Having a border with any settings you like */
-    padding: 2px 5px; /* b. Padding of 2px from the top/bottom and 5px from the left/right */
-    background-color: #e0e0e0; /* c. Any background colour (light/dark) */
-}
-
-
-/* Q15: Style both the <th> inside any table and the <td> inside the <tfoot>: */
-th, tfoot td {
-    text-transform: uppercase; /* a. With Uppercase letters */
-    background-color: #d1c7b7; /* b. Any background colour (dark/light) */
-    color: #333; /* c. Any colour (dark/light) */
-}
-
-/* Q16: Style any <dt> element */
-dt {
-    font-weight: bold; /* a. Make it bold */
-}
-
-
-/* Q17: Style any <footer> element */
-footer {
-    font-size: 80%; /* a. Change the font size to be 80% of the default font size or of the font size of the body */
-    text-align: center; /* b. Align your text to the centre of the table */
-    padding: 1px 0; /* c. Add 1px of padding from the top/bottom and 0 from the right/left */
-}
-
-
-/* Q18: Style any <iframe> element */
-iframe {
-    display: block; /* b. Make <iframe> a block level element */
-    margin: 10px auto; /* a. Add margin of 10px for top/bottom and center horizontally */
-}
-
-
-/* Q19: Style any <fieldset> element */
-fieldset {
-    width: 500px; /* a. Add width of 500px */
-    margin: 20px auto; /* b. Add margin of 20px for top/bottom and centre the fieldset horizontally */
-    border: 2px solid #ccc; /* c. Add border with any style you prefer */
-    background-color: #f9f9f9; /* d. Add background colour */
-}
-
-/* Q20: Style any <legend> element */
-legend {
-    font-style: italic; /* a. Italic font style */
-    color: #ecf0f1; /* b. Different front colour */
-    background-color: #7f8c8d;/* b. Different background colour */
-    margin: 0 10px; /* c. Margin of 0 from the top/bottom and 10px from the left/right */
-    padding: 0 5px; /* d. Padding of 0 from top/bottom and 5px from the left/right */
-    border-radius: 5px; /* e. Give it a rounded border with any size or setting you prefer */
-}
-
-/*21) Style the <input> element with type attribute of "submit"*/
-input[type="submit"] {
-    border: 1px solid #000000; /* a. Border with any style you like */
-    padding: 5px; /* b. Padding of 5px for all the sides */
-    background-color: #e0e0e0; /* c. Any background colour you prefer */
-    color: #000000; /* d. Any colour you prefer */
-}
-
-
-/*22) Style the <input> element with type attribute of "submit" in its hover state*/
-input[type="submit"]:hover {
-    color: #ffffff; /* a. Change its text colour */
-    background-color: #4CAF50; /* a. and its background colour */
-    cursor: pointer; /* b. Change the mouse pointer to look like a hand */
-}
-
-
-/*  final adjustments */
-#list a {
-    color: blue;
-    background: none; /* Aucun arrière-plan pour les liens dans #list */
-}
-
-#list li {
-    display: list-item;
-    text-transform: none;
-}
-
-#list, #list ol, #list li {
-    background: none; 
-    color: #333333;
+  .container1{
+    background-color: #535364;
+    color: #ddd;
+    text-align: center;
+  }
+  
+  footer {
+    background-color: #333;
+    color: #fff;
+    padding: 3px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
 }
 
 
