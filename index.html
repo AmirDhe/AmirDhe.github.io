@@ -200,7 +200,54 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-alpha3/dist/js/bootstrap.min.js" integrity="sha384-FLp6c7KPd3GtKHzcC5t8vme92G87sK3wLsm4IevtaSg/oyE7s8eEj5cuEaF9FuA5" crossorigin="anonymous"></script>
 
     <script>
-        // ... (unchanged scripts) ...
+        function calculateCircleArea() {
+    let radius = document.getElementById("radius").value.trim();
+    radius = parseFloat(radius);
+    if (isNaN(radius)) {
+        alert("Please enter a valid value for the radius.");
+        return;
+    }
+    let area = Math.PI * radius * radius;
+    document.getElementById("circle-area").value = area.toFixed(2);
+}
+
+function calculateTriangleArea() {
+    let base = document.getElementById("base").value.trim();
+    let height = document.getElementById("height").value.trim();
+    base = parseFloat(base);
+    height = parseFloat(height);
+    if (isNaN(base) || isNaN(height)) {
+        alert("Please enter valid values for the base and height.");
+        return;
+    }
+    let area = 0.5 * base * height;
+    document.getElementById("triangle-area").value = area.toFixed(2);
+}
+
+function calculateSquareArea() {
+    let side = document.getElementById("side").value.trim();
+    side = parseFloat(side);
+    if (isNaN(side)) {
+        alert("Please enter a valid value for the side.");
+        return;
+    }
+    let area = side * side;
+    document.getElementById("square-area").value = area.toFixed(2);
+}
+
+function calculateRectangleArea() {
+    let length = document.getElementById("length").value.trim();
+    let width = document.getElementById("width").value.trim();
+    length = parseFloat(length);
+    width = parseFloat(width);
+    if (isNaN(length) || isNaN(width)) {
+        alert("Please enter valid values for the length and width.");
+        return;
+    }
+    let area = length * width;
+    document.getElementById("rectangle-area").value = area.toFixed(2);
+}
+
     </script>
 </body>
 </html>
