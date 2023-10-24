@@ -28,8 +28,27 @@
         }
 
         .shape-box:hover {
-            background-color: #e9ecef;
             transform: scale(1.05);
+        }
+
+        .circle-color, #circle .card {
+            background-color: #A8E6CF;
+            color: #333;
+        }
+
+        .triangle-color, #triangle .card {
+            background-color: #DCC6E0;
+            color: #333;
+        }
+
+        .square-color, #square .card {
+            background-color: #FFF5A5;
+            color: #333;
+        }
+
+        .rectangle-color, #rectangle .card {
+            background-color: #A5DEE4;
+            color: #333;
         }
 
         .go {
@@ -61,22 +80,22 @@
         <!-- Shape boxes -->
         <div class="row mb-5">
             <div class="col-md-3 mb-3">
-                <div class="shape-box" onclick="location.href='#circle'">
+                <div class="shape-box circle-color" onclick="location.href='#circle'">
                     <h4>Circle</h4>
                 </div>
             </div>
             <div class="col-md-3 mb-3">
-                <div class="shape-box" onclick="location.href='#triangle'">
+                <div class="shape-box triangle-color" onclick="location.href='#triangle'">
                     <h4>Triangle</h4>
                 </div>
             </div>
             <div class="col-md-3 mb-3">
-                <div class="shape-box" onclick="location.href='#square'">
+                <div class="shape-box square-color" onclick="location.href='#square'">
                     <h4>Square</h4>
                 </div>
             </div>
             <div class="col-md-3 mb-3">
-                <div class="shape-box" onclick="location.href='#rectangle'">
+                <div class="shape-box rectangle-color" onclick="location.href='#rectangle'">
                     <h4>Rectangle</h4>
                 </div>
             </div>
@@ -84,7 +103,7 @@
 
         <!-- Circle Section -->
         <section id="circle" class="mb-4">
-            <div class="card">
+            <div class="card circle-color">
                 <div class="card-header">
                     <h2>Circle Area</h2>
                 </div>
@@ -108,7 +127,7 @@
 
         <!-- Triangle Section -->
         <section id="triangle" class="mb-4">
-            <div class="card">
+            <div class="card triangle-color">
                 <div class="card-header">
                     <h2>Triangle Area</h2>
                 </div>
@@ -136,7 +155,7 @@
 
         <!-- Square Section -->
         <section id="square" class="mb-4">
-            <div class="card">
+            <div class="card square-color">
                 <div class="card-header">
                     <h2>Square Area</h2>
                 </div>
@@ -160,7 +179,7 @@
 
         <!-- Rectangle Section -->
         <section id="rectangle" class="mb-4">
-            <div class="card">
+            <div class="card rectangle-color">
                 <div class="card-header">
                     <h2>Rectangle Area</h2>
                 </div>
@@ -201,54 +220,55 @@
 
     <script>
         function calculateCircleArea() {
-    let radius = document.getElementById("radius").value.trim();
-    radius = parseFloat(radius);
-    if (isNaN(radius)) {
-        alert("Please enter a valid value for the radius.");
-        return;
-    }
-    let area = Math.PI * radius * radius;
-    document.getElementById("circle-area").value = area.toFixed(2);
-}
+            let radius = document.getElementById("radius").value.trim();
+            radius = parseFloat(radius);
+            if (isNaN(radius)) {
+                alert("Please enter a valid value for the radius.");
+                return;
+            }
+            let area = Math.PI * radius * radius;
+            document.getElementById("circle-area").value = area.toFixed(2);
+        }
 
-function calculateTriangleArea() {
-    let base = document.getElementById("base").value.trim();
-    let height = document.getElementById("height").value.trim();
-    base = parseFloat(base);
-    height = parseFloat(height);
-    if (isNaN(base) || isNaN(height)) {
-        alert("Please enter valid values for the base and height.");
-        return;
-    }
-    let area = 0.5 * base * height;
-    document.getElementById("triangle-area").value = area.toFixed(2);
-}
+        function calculateTriangleArea() {
+            let base = document.getElementById("base").value.trim();
+            let height = document.getElementById("height").value.trim();
+            base = parseFloat(base);
+            height = parseFloat(height);
+            if (isNaN(base) || isNaN(height)) {
+                alert("Please enter valid values for the base and height.");
+                return;
+            }
+            let area = 0.5 * base * height;
+            document.getElementById("triangle-area").value = area.toFixed(2);
+        }
 
-function calculateSquareArea() {
-    let side = document.getElementById("side").value.trim();
-    side = parseFloat(side);
-    if (isNaN(side)) {
-        alert("Please enter a valid value for the side.");
-        return;
-    }
-    let area = side * side;
-    document.getElementById("square-area").value = area.toFixed(2);
-}
+        function calculateSquareArea() {
+            let side = document.getElementById("side").value.trim();
+            side = parseFloat(side);
+            if (isNaN(side)) {
+                alert("Please enter a valid value for the side.");
+                return;
+            }
+            let area = side * side;
+            document.getElementById("square-area").value = area.toFixed(2);
+        }
 
-function calculateRectangleArea() {
-    let length = document.getElementById("length").value.trim();
-    let width = document.getElementById("width").value.trim();
-    length = parseFloat(length);
-    width = parseFloat(width);
-    if (isNaN(length) || isNaN(width)) {
-        alert("Please enter valid values for the length and width.");
-        return;
-    }
-    let area = length * width;
-    document.getElementById("rectangle-area").value = area.toFixed(2);
-}
+        function calculateRectangleArea() {
+            let length = document.getElementById("length").value.trim();
+            let width = document.getElementById("width").value.trim();
+            length = parseFloat(length);
+            width = parseFloat(width);
+            if (isNaN(length) || isNaN(width)) {
+                alert("Please enter valid values for the length and width.");
+                return;
+            }
+            let area = length * width;
+            document.getElementById("rectangle-area").value = area.toFixed(2);
+        }
 
     </script>
 </body>
+
 </html>
 
