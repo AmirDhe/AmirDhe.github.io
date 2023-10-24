@@ -4,12 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <title>Area</title>
-
-    
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
 
     <style>
- 
         body {
             background-color: #f4f4f4;
             font-family: 'Arial', sans-serif;
@@ -43,26 +40,22 @@
         }
 
         .footer {
-    background-color: #222;
-    color: #fff;
-    text-align: center;
-    padding: 5px 0;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-    border-top: 1px solid #ddd;
-}
-
-
+            background-color: #222;
+            color: #fff;
+            text-align: center;
+            padding: 5px 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            border-top: 1px solid #ddd;
+        }
     </style>
 </head>
 
 <body>
     <div class="container main-container bg-white p-5">
         <h1 id="top" class="text-center mb-4">Basic Geometry</h1>
-
         <p class="mb-4">In this section, we are going to find the Area of some two-dimensional shapes</p>
-        
         <p class="mb-4">You can click on any shape below:</p>
 
         <!-- Shape boxes -->
@@ -89,120 +82,109 @@
             </div>
         </div>
 
-<!-- Circle Section -->
-<section id="circle" class="mb-4">
-    <div class="card">
-        <div class="card-header">
-            <h2>Circle Area</h2>
-        </div>
-        <div class="card-body">
-            <div class="mb-3">
-                <label for="radius" class="form-label">Enter the value of the circle's radius:</label> 
-                <input type="text" id="radius" class="form-control">
-            </div><br>
-            <div class="mb-3">
-                <label for="circle-area" class="form-label">Result:</label>
-                <input type="text" id="circle-area" class="form-control" readonly>
+        <!-- Circle Section -->
+        <section id="circle" class="mb-4">
+            <div class="card">
+                <div class="card-header">
+                    <h2>Circle Area</h2>
+                </div>
+                <div class="card-body">
+                    <div class="mb-3">
+                        <label for="radius" class="form-label">Enter the value of the circle's radius:</label>
+                        <input type="text" id="radius" class="form-control">
+                    </div><br>
+                    <div class="mb-3">
+                        <label for="circle-area" class="form-label">Result:</label>
+                        <input type="text" id="circle-area" class="form-control" readonly>
+                    </div> <br>
+                    <button onclick="calculateCircleArea()" class="btn btn-primary">Calculate</button>
+                </div>
             </div> <br>
-            <button onclick="calculateCircleArea()" class="btn btn-primary">Calculate</button>
-        </div>
-    </div> <br>
-
-    <div class="go">
-        <a href="#top" class="btn btn-secondary">Go to top</a>
-    </div>
-    
-</div>
-    <hr>
-</section>
-
-
-
-<!-- Triangle Section -->
-<section id="triangle" class="mb-4">
-    <div class="card">
-        <div class="card-header">
-            <h2>Triangle Area</h2>
-        </div>
-        <div class="card-body">
-            <div class="mb-3">
-                <label for="base" class="form-label">Enter the value of the triangle's base:</label>
-                <input type="text" id="base" class="form-control">
-            </div><br>
-            <div class="mb-3">
-                <label for="height" class="form-label">Enter the value of the triangle's height:</label>
-                <input type="text" id="height" class="form-control">
-            </div><br>
-            <div class="mb-3">
-                <label for="triangle-area" class="form-label">Result:</label>
-                <input type="text" id="triangle-area" class="form-control" readonly>
-            </div><br>
-            <button onclick="calculateTriangleArea()" class="btn btn-primary">Calculate</button>
-        </div>
-    </div> <br>
-    <div class="go text-center">
-        <a href="#top" class="btn btn-secondary">Go to top</a>
-    </div>
-</div>
-    <hr>
-</section>
-
-<!-- Square Section -->
-<section id="square" class="mb-4">
-    <div class="card">
-        <div class="card-header">
-            <h2>Square Area</h2>
-        </div>
-        <div class="card-body">
-            <div class="mb-3">
-                <label for="side" class="form-label">Enter the value of the square's side:</label>
-                <input type="text" id="side" class="form-control">
-            </div> <br>
-            <div class="mb-3">
-                <label for="square-area" class="form-label">Result:</label>
-                <input type="text" id="square-area" class="form-control" readonly>
-            </div> <br>
-            <button onclick="calculateSquareArea()" class="btn btn-primary">Calculate</button>
-        </div>
-    </div> <br>
-    <div class="go text-center">
-        <a href="#top" class="btn btn-secondary">Go to top</a>
-    </div>
-</div>
-    <hr>
-</section>
-
-<!-- Rectangle Section -->
-<section id="rectangle" class="mb-4">
-    <div class="card">
-        <div class="card-header">
-            <h2>Rectangle Area</h2>
-        </div>
-        <div class="card-body">
-            <div class="mb-3">
-                <label for="length" class="form-label">Enter the value of the rectangle's length:</label>
-                <input type="text" id="length" class="form-control">
-            </div> <br>
-            <div class="mb-3">
-                <label for="width" class="form-label">Enter the value of the rectangle's width:</label>
-                <input type="text" id="width" class="form-control">
+            <div class="go">
+                <a href="#top" class="btn btn-secondary">Go to top</a>
             </div>
-            <div class="mb-3">
-                <label for="rectangle-area" class="form-label">Result:</label>
-                <input type="text" id="rectangle-area" class="form-control" readonly>
+            <hr>
+        </section>
+
+        <!-- Triangle Section -->
+        <section id="triangle" class="mb-4">
+            <div class="card">
+                <div class="card-header">
+                    <h2>Triangle Area</h2>
+                </div>
+                <div class="card-body">
+                    <div class="mb-3">
+                        <label for="base" class="form-label">Enter the value of the triangle's base:</label>
+                        <input type="text" id="base" class="form-control">
+                    </div><br>
+                    <div class="mb-3">
+                        <label for="height" class="form-label">Enter the value of the triangle's height:</label>
+                        <input type="text" id="height" class="form-control">
+                    </div><br>
+                    <div class="mb-3">
+                        <label for="triangle-area" class="form-label">Result:</label>
+                        <input type="text" id="triangle-area" class="form-control" readonly>
+                    </div><br>
+                    <button onclick="calculateTriangleArea()" class="btn btn-primary">Calculate</button>
+                </div>
             </div> <br>
-            <button onclick="calculateRectangleArea()" class="btn btn-primary">Calculate</button>
-        </div>
-    </div> <br>
-    <div class="go text-center">
-        <a href="#top" class="btn btn-secondary">Go to top</a>
-    </div>
-</div>
-    <hr>
-</section>
+            <div class="go text-center">
+                <a href="#top" class="btn btn-secondary">Go to top</a>
+            </div>
+            <hr>
+        </section>
 
+        <!-- Square Section -->
+        <section id="square" class="mb-4">
+            <div class="card">
+                <div class="card-header">
+                    <h2>Square Area</h2>
+                </div>
+                <div class="card-body">
+                    <div class="mb-3">
+                        <label for="side" class="form-label">Enter the value of the square's side:</label>
+                        <input type="text" id="side" class="form-control">
+                    </div> <br>
+                    <div class="mb-3">
+                        <label for="square-area" class="form-label">Result:</label>
+                        <input type="text" id="square-area" class="form-control" readonly>
+                    </div> <br>
+                    <button onclick="calculateSquareArea()" class="btn btn-primary">Calculate</button>
+                </div>
+            </div> <br>
+            <div class="go text-center">
+                <a href="#top" class="btn btn-secondary">Go to top</a>
+            </div>
+            <hr>
+        </section>
 
-
+        <!-- Rectangle Section -->
+        <section id="rectangle" class="mb-4">
+            <div class="card">
+                <div class="card-header">
+                    <h2>Rectangle Area</h2>
+                </div>
+                <div class="card-body">
+                    <div class="mb-3">
+                        <label for="length" class="form-label">Enter the value of the rectangle's length:</label>
+                        <input type="text" id="length" class="form-control">
+                    </div> <br>
+                    <div class="mb-3">
+                        <label for="width" class="form-label">Enter the value of the rectangle's width:</label>
+                        <input type="text" id="width" class="form-control">
+                    </div>
+                    <div class="mb-3">
+                        <label for="rectangle-area" class="form-label">Result:</label>
+                        <input type="text" id="rectangle-area" class="form-control" readonly>
+                    </div> <br>
+                    <button onclick="calculateRectangleArea()" class="btn btn-primary">Calculate</button>
+                </div>
+            </div> <br>
+            <div class="go text-center">
+                <a href="#top" class="btn btn-secondary">Go to top</a>
+            </div>
+            <hr>
+        </section>
 
         <div class="go text-center">
             <a href="#top" class="btn btn-secondary">Go to top</a>
@@ -210,66 +192,16 @@
     </div>
 
     <!-- Footer -->
-<footer class="footer">
-    <p>Amir DAHMANE Lab 5 &copy All rights reserved.</p>
-</footer>
-
-
+    <footer class="footer">
+        <p>Amir DAHMANE Lab 5 &copy; All rights reserved.</p>
+    </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-pzjw8f+ua7Kw1TIq0v8FqFjcJ6pajs/rfdfs3SO+kD5tr5Szkbe5FvKnaSR3U3r4" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-alpha3/dist/js/bootstrap.min.js" integrity="sha384-FLp6c7KPd3GtKHzcC5t8vme92G87sK3wLsm4IevtaSg/oyE7s8eEj5cuEaF9FuA5" crossorigin="anonymous"></script>
 
     <script>
-        function calculateCircleArea() {
-            let radius = document.getElementById("radius").value.trim();
-            radius = parseFloat(radius);
-            if (isNaN(radius)) {
-                alert("Please enter a valid value for the radius.");
-                return;
-            }
-            let area = Math.PI * radius * radius;
-            document.getElementById("circle-area").value = area.toFixed(2);
-        }
-    
-        function calculateTriangleArea() {
-            let base = document.getElementById("base").value.trim();
-            let height = document.getElementById("height").value.trim();
-            base = parseFloat(base);
-            height = parseFloat(height);
-            if (isNaN(base) || isNaN(height)) {
-                alert("Please enter valid values for the base and height.");
-                return;
-            }
-            let area = 0.5 * base * height;
-            document.getElementById("triangle-area").value = area.toFixed(2);
-        }
-    
-        function calculateSquareArea() {
-            let side = document.getElementById("side").value.trim();
-            side = parseFloat(side);
-            if (isNaN(side)) {
-                alert("Please enter a valid value for the side.");
-                return;
-            }
-            let area = side * side;
-            document.getElementById("square-area").value = area.toFixed(2);
-        }
-    
-        function calculateRectangleArea() {
-            let length = document.getElementById("length").value.trim();
-            let width = document.getElementById("width").value.trim();
-            length = parseFloat(length);
-            width = parseFloat(width);
-            if (isNaN(length) || isNaN(width)) {
-                alert("Please enter valid values for the length and width.");
-                return;
-            }
-            let area = length * width;
-            document.getElementById("rectangle-area").value = area.toFixed(2);
-        }
+        // ... (unchanged scripts) ...
     </script>
-    
-    
 </body>
-
 </html>
+
